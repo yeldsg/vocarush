@@ -1,0 +1,76 @@
+﻿Build1=Default,b4a.example
+File1=layaverage.bal
+File2=layextreme.bal
+File3=layInstructions.bal
+File4=laykid.bal
+File5=layLeaderboard.bal
+File6=layLevel.bal
+File7=layprofile.bal
+File8=layresult.bal
+File9=mainPage.bal
+FileGroup1=Default Group
+FileGroup2=Default Group
+FileGroup3=Default Group
+FileGroup4=Default Group
+FileGroup5=Default Group
+FileGroup6=Default Group
+FileGroup7=Default Group
+FileGroup8=Default Group
+FileGroup9=Default Group
+Group=Default Group
+Library1=core
+Library2=tts
+Library3=xui
+Library4=sql
+ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: https://www.b4x.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="34"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~AddPermission(android.permission.INTERNET)~\n~AddPermission(android.permission.ACCESS_NETWORK_STATE)~\n~~\n~CreateResourceFromFile(Macro, Themes.LightTheme)~\n~'End of default text.~\n~
+Module1=Average
+Module2=Database
+Module3=Extreme
+Module4=Instructions
+Module5=Kid
+Module6=Leaderboard
+Module7=Level
+Module8=Profile
+Module9=Result
+Module10=Starter
+NumberOfFiles=9
+NumberOfLibraries=4
+NumberOfModules=10
+Version=13.1
+@EndOfDesignText@
+
+#Region  Activity Attributes 
+    #FullScreen: True
+    #IncludeTitle: False
+#End Region
+
+Sub Process_Globals
+	Public playerList As List
+End Sub
+
+Sub Globals
+	Private BTN_ENTER As Button
+	Private ET_PNAME As EditText
+	
+End Sub
+
+Sub Activity_Create(FirstTime As Boolean)
+	Activity.LoadLayout("mainPage")
+	
+	If playerList.IsInitialized = False Then playerList.Initialize
+	Database.Init
+End Sub
+
+Private Sub BTN_ENTER_Click
+	If ET_PNAME.Text = "" Then
+		MsgboxAsync("Please enter your name", "WARNING")
+	Else
+		playerList.Add(ET_PNAME.Text)
+		ToastMessageShow("Added Player: " & ET_PNAME.Text, False)
+		Level.PlayerName = ET_PNAME.Text
+		ET_PNAME.Text = ""
+		StartActivity(Level)
+	End If
+End Sub
+
+
