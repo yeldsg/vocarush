@@ -1,22 +1,81 @@
 # VocaRush
 
-An Android spelling game built with B4A (Basic4Android). The app says a word out loud using text-to-speech, and the player types the correct spelling before the timer runs out.
+**An Android spelling game that helps players build their vocabulary through listening.**
+
+VocaRush reads a word aloud with text-to-speech, and the player has to type the correct spelling before time runs out. It has three difficulty levels, hints for every word, and a leaderboard that is saved on the device.
+
+![Android](https://img.shields.io/badge/Android-3DDC84?logo=android&logoColor=white)
+![B4A](https://img.shields.io/badge/B4A-Basic4Android-0078D4)
+![SQLite](https://img.shields.io/badge/SQLite-003B57?logo=sqlite&logoColor=white)
+
+---
 
 ## Features
 
-- Three difficulty levels: Kid, Average and Extreme (10 words each)
-- Text-to-speech reads each word aloud
-- 15-second timer and 3 lives per game
-- A hint for every word
-- Leaderboard for each level (top 10), saved in SQLite so scores stay after the app is closed
-- Player profile with overall score (best Kid + Average + Extreme score) and overall ranking
+- **Three difficulty levels:** Kid, Average and Extreme, with 10 words each, shuffled every game
+- **Text-to-speech:** each word is spoken aloud, and the player can replay it
+- **Timed rounds:** 15 seconds per word and 3 lives per game
+- **Hints:** a short definition is available for every word
+- **Persistent leaderboard:** the top 10 scores for each level are stored in SQLite and kept after the app is closed
+- **Player profile:** shows the player's overall score (best Kid + Average + Extreme score) and overall ranking
+- **Results screen:** shows the final score and level at the end of each game
 
-## Tech stack
+## How to Play
 
-B4A (BASIC), SQLite, Android text-to-speech
+1. Enter your name and choose a level.
+2. Tap the speaker button to hear the word. The 15-second timer starts.
+3. Type the spelling and press Enter. Correct answers earn 10 points.
+4. A wrong answer or running out of time costs one life. The game ends when all lives are lost or all words are answered.
 
-## Build it
+## Tech Stack
 
-1. Install [B4A](https://www.b4x.com/b4a.html) and the Android SDK it asks for.
-2. Open `spellingGame.b4a` in B4A.
-3. Connect an Android phone (or start an emulator) and press Run.
+| Area | Technology |
+|---|---|
+| Language | B4X (BASIC) |
+| Framework | B4A (Basic4Android) |
+| Database | SQLite (B4A SQL library) |
+| Speech | Android Text-to-Speech (B4A TTS library) |
+
+## Project Structure
+
+```
+VocaRush/
+├── spellingGame.b4a      # Main project file (name entry screen)
+├── Starter.bas           # App service: opens the database on launch
+├── Database.bas          # SQLite: save scores, leaderboard, profile stats
+├── Level.bas             # Level selection screen
+├── Kid.bas               # Game screens for each level
+├── Average.bas
+├── Extreme.bas
+├── Result.bas            # Results screen
+├── Leaderboard.bas       # Leaderboard screen
+├── Profile.bas           # Player profile screen
+├── Instructions.bas      # How-to-play screen
+└── Files/                # Screen layouts (.bal)
+```
+
+## Getting Started
+
+### Prerequisites
+
+- [B4A](https://www.b4x.com/b4a.html) (free), set up with the Android SDK and Java JDK
+- An Android device or emulator running Android 5.0 (API 21) or newer
+
+### Build and Run
+
+```bash
+git clone https://github.com/yeldsg/vocarush.git
+```
+
+1. Open `spellingGame.b4a` in B4A.
+2. Connect an Android device with USB debugging turned on, or start an emulator.
+3. Press **Run** (F5) to build and install the app.
+
+## About This Project
+
+VocaRush was built as a team project for a mobile development course (April – May 2025). I worked on it as a **Mobile Developer**.
+
+## Author
+
+**Kathrina Marhiel Zamora** · BS Information Technology, Pampanga State University
+GitHub: [@yeldsg](https://github.com/yeldsg)
