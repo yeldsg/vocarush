@@ -10,6 +10,20 @@ VocaRush reads a word aloud with text-to-speech, and the player has to type the 
 
 ---
 
+## Screenshots
+
+<img src="docs/screenshots/screens.png" alt="Title screen, level selection, and a Kid-level spelling round">
+
+<table>
+  <tr>
+    <td width="50%"><img src="docs/screenshots/result.png" alt="Results screen with the final score"><br><sub>Results screen with the final score</sub></td>
+    <td width="50%"><img src="docs/screenshots/profile.png" alt="Player profile with games played and average score"><br><sub>Player profile with games played and average score</sub></td>
+  </tr>
+  <tr>
+    <td width="50%"><img src="docs/screenshots/leaderboard.png" alt="Kid-mode leaderboard"><br><sub>Kid-mode leaderboard</sub></td>
+  </tr>
+</table>
+
 ## Features
 
 - **Three difficulty levels:** Kid, Average and Extreme, with 10 words each, shuffled every game
@@ -26,6 +40,14 @@ VocaRush reads a word aloud with text-to-speech, and the player has to type the 
 2. Tap the speaker button to hear the word. The 15-second timer starts.
 3. Type the spelling and press Enter. Correct answers earn 10 points.
 4. A wrong answer or running out of time costs one life. The game ends when all lives are lost or all words are answered.
+
+## My Role
+
+I worked on this team project as the **Mobile Developer** and led the team as **Project Manager**.
+
+- Implemented text-to-speech that reads each word aloud for players to spell.
+- Built quiz gameplay that checks typed answers against the correct spelling.
+- Stored questions, scores, and a leaderboard locally with SQLite to track player progress.
 
 ## Tech Stack
 
@@ -73,9 +95,9 @@ git clone https://github.com/yeldsg/vocarush.git
 
 ## About This Project
 
-VocaRush was built as a team project for a mobile development course (April – May 2025). I worked on it as a **Mobile Developer**.
+VocaRush was built as a team project for a mobile development course (April – May 2025).
 
 ## Author
 
 **Kathrina Marhiel Zamora** · BS Information Technology, Pampanga State University
-GitHub: [@yeldsg](https://github.com/yeldsg)
+GitHub: [@yeldsg](https://github.com/yeldsg) · Portfolio: [yeldsg-portfolio.vercel.app](https://yeldsg-portfolio.vercel.app)
