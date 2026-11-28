@@ -100,4 +100,4 @@ VocaRush was built as a team project for a mobile development course (April – 
 ## Author
 
 **Kathrina Marhiel Zamora** · BS Information Technology, Pampanga State University
-GitHub: [@yeldsg](https://github.com/yeldsg) · Portfolio: [yeldsg-portfolio.vercel.app](https://yeldsg-portfolio.vercel.app)
+GitHub: [@yeldsg](https://github.com/yeldsg) · Portfolio: [yeldsg-portfolio.vercel.app](https://yeldsg-portfolio.vercel.app) · LinkedIn: [linkedin.com/in/yeldsg](https://www.linkedin.com/in/yeldsg)
